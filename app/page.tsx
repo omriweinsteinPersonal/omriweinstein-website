@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const projects = [
   {
     name: "Nutrilens",
@@ -74,25 +76,14 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="nutrilens-preview" aria-hidden="true">
-                  <div className="nutrition-panel">
-                    <div>
-                      <span>Protein</span>
-                      <strong>31g</strong>
-                    </div>
-                    <div>
-                      <span>Carbs</span>
-                      <strong>42g</strong>
-                    </div>
-                    <div>
-                      <span>Score</span>
-                      <strong>92</strong>
-                    </div>
-                  </div>
-                  <div className="scan-orbit" />
-                  <div className="food-chip chip-one" />
-                  <div className="food-chip chip-two" />
-                  <div className="food-chip chip-three" />
+                <div className="relative h-[360px] overflow-hidden bg-neutral-100">
+                  <Image
+                    src="/nutrilens-scan.png"
+                    alt="Phone camera scanning a bowl of food"
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover object-[50%_54%] transition duration-500 group-hover:scale-[1.03]"
+                  />
                 </div>
 
                 <div className="flex items-center justify-between px-7 py-6 font-mono text-sm">
