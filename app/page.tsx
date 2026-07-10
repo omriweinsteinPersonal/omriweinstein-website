@@ -3,7 +3,8 @@ import Image from "next/image";
 const projects = [
   {
     name: "Nutrilens",
-    description: "An AI-powered application for nutrition and food analysis.",
+    description:
+      "NutriLens lets people scan or describe meals and get a personalized nutrition score based on their goals, body profile, and health context. It also ranks restaurant and menu options before they order, turning everyday food decisions into practical coaching.",
     url: "https://nutrilens.omriweinstein.com",
     tags: ["AI", "Nutrition", "Computer Vision"],
   },
@@ -51,6 +52,12 @@ export default function Home() {
               className="rounded-full bg-gradient-to-r from-[#5eead4] via-[#38bdf8] to-[#a7f3d0] px-6 py-3 shadow-[0_14px_34px_rgba(56,189,248,0.24)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(94,234,212,0.28)]"
             >
               LinkedIn
+            </a>
+            <a
+              href="mailto:omri.weinstein@gmail.com"
+              className="rounded-full bg-gradient-to-r from-[#5eead4] via-[#38bdf8] to-[#a7f3d0] px-6 py-3 shadow-[0_14px_34px_rgba(56,189,248,0.24)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(94,234,212,0.28)]"
+            >
+              Email
             </a>
           </nav>
         </div>
