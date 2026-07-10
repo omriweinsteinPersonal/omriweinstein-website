@@ -58,7 +58,9 @@ html {
 
 .signal-ring,
 .signal-line,
-.signal-dot {
+.signal-dot,
+.venture-panel,
+.build-orbit {
   position: absolute;
   display: block;
   pointer-events: none;
@@ -154,6 +156,131 @@ html {
   animation-delay: -7s;
 }
 
+.nutrilens-photo-frame::before {
+  position: absolute;
+  inset: -24px;
+  content: "";
+  background-image: url("/nutrilens-scan.png");
+  background-position: center;
+  background-size: cover;
+  filter: blur(18px);
+  opacity: 0.38;
+  transform: scale(1.08);
+}
+
+.venture-panel {
+  width: 188px;
+  height: 116px;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgb(255 255 255 / 10%), rgb(255 255 255 / 3%)),
+    rgb(20 26 35 / 34%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 10%),
+    0 24px 70px rgb(0 0 0 / 18%);
+  opacity: 0.46;
+  animation: panel-float 13s ease-in-out infinite;
+  backdrop-filter: blur(6px);
+}
+
+.venture-panel span {
+  position: absolute;
+  left: 22px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 18%);
+}
+
+.venture-panel span:nth-child(1) {
+  top: 28px;
+  width: 112px;
+}
+
+.venture-panel span:nth-child(2) {
+  top: 52px;
+  width: 72px;
+  background: rgb(245 154 69 / 42%);
+}
+
+.venture-panel span:nth-child(3) {
+  right: 20px;
+  bottom: 22px;
+  left: auto;
+  width: 44px;
+  height: 44px;
+  border: 8px solid rgb(125 211 252 / 24%);
+  border-right-color: rgb(245 154 69 / 58%);
+  border-radius: 999px;
+  background: transparent;
+}
+
+.panel-one {
+  --panel-rotation: -7deg;
+
+  top: 16%;
+  right: 12%;
+  transform: rotate(-7deg);
+}
+
+.panel-two {
+  --panel-rotation: 8deg;
+
+  bottom: 18%;
+  left: 9%;
+  transform: rotate(8deg);
+  animation-delay: -5s;
+}
+
+.build-orbit {
+  border: 1px solid rgb(125 211 252 / 12%);
+  border-radius: 999px;
+  animation: orbit-turn 28s linear infinite;
+}
+
+.build-orbit::before,
+.build-orbit::after {
+  position: absolute;
+  content: "";
+  border-radius: 999px;
+}
+
+.build-orbit::before {
+  top: 12%;
+  left: 50%;
+  width: 8px;
+  aspect-ratio: 1;
+  background: #7dd3fc;
+  box-shadow: 0 0 22px rgb(125 211 252 / 70%);
+}
+
+.build-orbit::after {
+  right: 17%;
+  bottom: 16%;
+  width: 6px;
+  aspect-ratio: 1;
+  background: #a7f3d0;
+  box-shadow: 0 0 18px rgb(167 243 208 / 58%);
+}
+
+.orbit-one {
+  top: 28%;
+  left: 13%;
+  width: 44vw;
+  aspect-ratio: 1 / 0.58;
+  transform: rotate(-12deg);
+}
+
+.orbit-two {
+  right: 4%;
+  bottom: 8%;
+  width: 48vw;
+  aspect-ratio: 1 / 0.5;
+  transform: rotate(18deg);
+  animation-direction: reverse;
+  animation-duration: 36s;
+}
+
 @media (max-width: 640px) {
   .signal-line {
     width: 70vw;
@@ -165,6 +292,21 @@ html {
     width: 220px;
   }
 
+  .venture-panel {
+    width: 142px;
+    height: 88px;
+    opacity: 0.32;
+  }
+
+  .panel-one {
+    top: 10%;
+    right: -16%;
+  }
+
+  .panel-two {
+    bottom: 24%;
+    left: -18%;
+  }
 }
 
 @keyframes drift-lines {
@@ -223,5 +365,26 @@ html {
 
   50% {
     transform: translate3d(18px, -22px, 0);
+  }
+}
+
+@keyframes panel-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(var(--panel-rotation, 0deg));
+  }
+
+  50% {
+    transform: translate3d(0, -18px, 0) rotate(var(--panel-rotation, 0deg));
+  }
+}
+
+@keyframes orbit-turn {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
   }
 }

@@ -24,6 +24,18 @@ export default function Home() {
         <span className="signal-dot dot-two" />
         <span className="signal-dot dot-three" />
         <span className="signal-dot dot-four" />
+        <span className="venture-panel panel-one">
+          <span />
+          <span />
+          <span />
+        </span>
+        <span className="venture-panel panel-two">
+          <span />
+          <span />
+          <span />
+        </span>
+        <span className="build-orbit orbit-one" />
+        <span className="build-orbit orbit-two" />
       </div>
 
       <section className="relative z-10 flex min-h-[88svh] items-center justify-center px-6 py-20 text-center">
@@ -49,14 +61,14 @@ export default function Home() {
         <div className="mx-auto max-w-6xl">
           <h2 className="sr-only">Projects</h2>
 
-          <div className="grid gap-10 md:grid-cols-2">
+          <div className="grid justify-items-center gap-10">
             {projects.map((project) => (
               <a
                 key={project.name}
                 href={project.url}
                 target="_blank"
                 rel="noreferrer"
-                className="group overflow-hidden rounded bg-white text-[#2f2f2f] shadow-[0_18px_40px_rgba(0,0,0,0.32)] transition hover:-translate-y-1 hover:shadow-[0_24px_50px_rgba(0,0,0,0.42)]"
+                className="group w-full max-w-xl overflow-hidden rounded bg-white text-[#2f2f2f] shadow-[0_18px_40px_rgba(0,0,0,0.32)] transition hover:-translate-y-1 hover:shadow-[0_24px_50px_rgba(0,0,0,0.42)]"
               >
                 <div className="px-7 pb-7 pt-6 text-center">
                   <h3 className="font-mono text-3xl tracking-wide">
@@ -70,13 +82,14 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="relative h-[360px] overflow-hidden bg-neutral-100">
+                <div className="nutrilens-photo-frame relative h-[420px] overflow-hidden bg-[#eee4d7] sm:h-[460px]">
                   <Image
                     src="/nutrilens-scan.png"
                     alt="Phone camera scanning a bowl of food"
                     fill
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    className="object-cover object-[50%_54%] transition duration-500 group-hover:scale-[1.03]"
+                    sizes="(min-width: 768px) 576px, calc(100vw - 48px)"
+                    unoptimized
+                    className="object-contain p-4 transition duration-500 group-hover:scale-[1.02]"
                   />
                 </div>
 
