@@ -3,7 +3,6 @@ import Image from "next/image";
 const projects = [
   {
     name: "Nutrilens",
-    date: "2026",
     description: "An AI-powered application for nutrition and food analysis.",
     url: "https://nutrilens.omriweinstein.com",
     tags: ["AI", "Nutrition", "Computer Vision"],
@@ -74,9 +73,6 @@ export default function Home() {
                   <h3 className="font-mono text-3xl tracking-wide">
                     {project.name}
                   </h3>
-                  <p className="mt-2 font-mono text-base text-neutral-500">
-                    {project.date}
-                  </p>
                   <p className="mx-auto mt-8 max-w-sm font-mono text-sm leading-6 text-neutral-500">
                     {project.description}
                   </p>
