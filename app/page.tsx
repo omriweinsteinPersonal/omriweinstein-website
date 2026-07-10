@@ -38,12 +38,12 @@ export default function Home() {
               Projects
             </a>
             <a
-              href="https://github.com/"
+              href="https://www.linkedin.com/in/omriweinstein/"
               target="_blank"
               rel="noreferrer"
               className="rounded-full bg-[#f59a45] px-6 py-3 shadow-[0_10px_20px_rgba(0,0,0,0.35)] transition hover:-translate-y-0.5 hover:bg-[#ffad5f]"
             >
-              GitHub
+              LinkedIn
             </a>
           </nav>
         </div>
