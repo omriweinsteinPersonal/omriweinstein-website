@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #242932;
+  --background: #101820;
   --foreground: #ffffff;
 }
 
@@ -28,10 +28,11 @@ html {
   z-index: 0;
   overflow: hidden;
   background:
-    radial-gradient(circle at 22% 18%, rgb(245 154 69 / 20%), transparent 24%),
-    radial-gradient(circle at 78% 26%, rgb(96 165 250 / 16%), transparent 22%),
-    radial-gradient(circle at 50% 76%, rgb(125 211 252 / 13%), transparent 24%),
-    #242932;
+    radial-gradient(circle at 20% 18%, rgb(94 234 212 / 20%), transparent 23%),
+    radial-gradient(circle at 78% 24%, rgb(56 189 248 / 18%), transparent 24%),
+    radial-gradient(circle at 48% 74%, rgb(167 243 208 / 14%), transparent 22%),
+    radial-gradient(circle at 82% 78%, rgb(217 70 239 / 12%), transparent 21%),
+    #101820;
 }
 
 .signal-field::before,
@@ -43,14 +44,14 @@ html {
 
 .signal-field::before {
   background:
-    linear-gradient(115deg, transparent 0 42%, rgb(255 255 255 / 7%) 42.08%, transparent 42.22%),
-    linear-gradient(36deg, transparent 0 58%, rgb(255 255 255 / 5%) 58.08%, transparent 58.22%),
-    linear-gradient(152deg, transparent 0 68%, rgb(245 154 69 / 9%) 68.08%, transparent 68.23%);
+    linear-gradient(115deg, transparent 0 42%, rgb(94 234 212 / 8%) 42.08%, transparent 42.22%),
+    linear-gradient(36deg, transparent 0 58%, rgb(56 189 248 / 7%) 58.08%, transparent 58.22%),
+    linear-gradient(152deg, transparent 0 68%, rgb(217 70 239 / 7%) 68.08%, transparent 68.23%);
   animation: drift-lines 26s linear infinite;
 }
 
 .signal-field::after {
-  background-image: radial-gradient(circle, rgb(255 255 255 / 16%) 0 1px, transparent 1.4px);
+  background-image: radial-gradient(circle, rgb(167 243 208 / 18%) 0 1px, transparent 1.4px);
   background-size: 52px 52px;
   opacity: 0.28;
   animation: drift-grid 18s linear infinite;
@@ -127,8 +128,8 @@ html {
   width: 9px;
   aspect-ratio: 1;
   border-radius: 999px;
-  background: #f59a45;
-  box-shadow: 0 0 26px rgb(245 154 69 / 70%);
+  background: #5eead4;
+  box-shadow: 0 0 26px rgb(94 234 212 / 72%);
   opacity: 0.75;
   animation: float-dot 8s ease-in-out infinite;
 }
@@ -141,18 +142,24 @@ html {
 .dot-two {
   top: 36%;
   right: 24%;
+  background: #38bdf8;
+  box-shadow: 0 0 26px rgb(56 189 248 / 72%);
   animation-delay: -2s;
 }
 
 .dot-three {
   bottom: 27%;
   left: 17%;
+  background: #a7f3d0;
+  box-shadow: 0 0 24px rgb(167 243 208 / 64%);
   animation-delay: -5s;
 }
 
 .dot-four {
   right: 17%;
   bottom: 18%;
+  background: #d946ef;
+  box-shadow: 0 0 24px rgb(217 70 239 / 58%);
   animation-delay: -7s;
 }
 
@@ -174,8 +181,8 @@ html {
   border: 1px solid rgb(255 255 255 / 10%);
   border-radius: 18px;
   background:
-    linear-gradient(135deg, rgb(255 255 255 / 10%), rgb(255 255 255 / 3%)),
-    rgb(20 26 35 / 34%);
+    linear-gradient(135deg, rgb(94 234 212 / 10%), rgb(56 189 248 / 5%)),
+    rgb(9 18 27 / 40%);
   box-shadow:
     inset 0 1px 0 rgb(255 255 255 / 10%),
     0 24px 70px rgb(0 0 0 / 18%);
@@ -200,7 +207,7 @@ html {
 .venture-panel span:nth-child(2) {
   top: 52px;
   width: 72px;
-  background: rgb(245 154 69 / 42%);
+  background: rgb(94 234 212 / 48%);
 }
 
 .venture-panel span:nth-child(3) {
@@ -209,8 +216,8 @@ html {
   left: auto;
   width: 44px;
   height: 44px;
-  border: 8px solid rgb(125 211 252 / 24%);
-  border-right-color: rgb(245 154 69 / 58%);
+  border: 8px solid rgb(56 189 248 / 25%);
+  border-right-color: rgb(167 243 208 / 66%);
   border-radius: 999px;
   background: transparent;
 }
@@ -233,7 +240,7 @@ html {
 }
 
 .build-orbit {
-  border: 1px solid rgb(125 211 252 / 12%);
+  border: 1px solid rgb(94 234 212 / 13%);
   border-radius: 999px;
   animation: orbit-turn 28s linear infinite;
 }
@@ -250,8 +257,8 @@ html {
   left: 50%;
   width: 8px;
   aspect-ratio: 1;
-  background: #7dd3fc;
-  box-shadow: 0 0 22px rgb(125 211 252 / 70%);
+  background: #38bdf8;
+  box-shadow: 0 0 22px rgb(56 189 248 / 70%);
 }
 
 .build-orbit::after {
@@ -259,8 +266,8 @@ html {
   bottom: 16%;
   width: 6px;
   aspect-ratio: 1;
-  background: #a7f3d0;
-  box-shadow: 0 0 18px rgb(167 243 208 / 58%);
+  background: #d946ef;
+  box-shadow: 0 0 18px rgb(217 70 239 / 58%);
 }
 
 .orbit-one {

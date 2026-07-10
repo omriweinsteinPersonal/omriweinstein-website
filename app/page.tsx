@@ -11,7 +11,7 @@ const projects = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#242932] text-white">
+    <main className="min-h-screen overflow-hidden bg-[#101820] text-white">
       <div className="signal-field" aria-hidden="true">
         <span className="signal-ring ring-one" />
         <span className="signal-ring ring-two" />
@@ -43,12 +43,12 @@ export default function Home() {
             Omri Weinstein
           </h1>
 
-          <nav className="mt-10 flex w-full max-w-[180px] flex-col gap-4 font-mono text-base text-black">
+          <nav className="mt-10 flex w-full max-w-[180px] flex-col gap-4 font-mono text-base font-semibold text-[#071014]">
             <a
               href="https://www.linkedin.com/in/omriweinstein/"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full bg-[#f59a45] px-6 py-3 shadow-[0_10px_20px_rgba(0,0,0,0.35)] transition hover:-translate-y-0.5 hover:bg-[#ffad5f]"
+              className="rounded-full bg-gradient-to-r from-[#5eead4] via-[#38bdf8] to-[#a7f3d0] px-6 py-3 shadow-[0_14px_34px_rgba(56,189,248,0.24)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(94,234,212,0.28)]"
             >
               LinkedIn
             </a>
