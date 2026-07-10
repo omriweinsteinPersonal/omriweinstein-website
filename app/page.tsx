@@ -8,33 +8,20 @@ const projects = [
   },
 ];
 
-const backgroundNodes = [
-  { label: "AI", top: "9%", left: "10%" },
-  { label: "{ }", top: "24%", left: "78%" },
-  { label: "API", top: "32%", left: "15%" },
-  { label: "ML", top: "43%", left: "63%" },
-  { label: "DATA", top: "55%", left: "8%" },
-  { label: "TS", top: "68%", left: "75%" },
-  { label: "SQL", top: "79%", left: "25%" },
-  { label: "UX", top: "86%", left: "58%" },
-];
-
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#242932] text-white">
-      <div className="site-constellation" aria-hidden="true">
-        {backgroundNodes.map((node, index) => (
-          <span
-            key={node.label}
-            className="constellation-node"
-            style={{ top: node.top, left: node.left }}
-          >
-            <span className="node-mark">{node.label}</span>
-            {index < backgroundNodes.length - 1 ? (
-              <span className="node-line" />
-            ) : null}
-          </span>
-        ))}
+      <div className="signal-field" aria-hidden="true">
+        <span className="signal-ring ring-one" />
+        <span className="signal-ring ring-two" />
+        <span className="signal-ring ring-three" />
+        <span className="signal-line line-one" />
+        <span className="signal-line line-two" />
+        <span className="signal-line line-three" />
+        <span className="signal-dot dot-one" />
+        <span className="signal-dot dot-two" />
+        <span className="signal-dot dot-three" />
+        <span className="signal-dot dot-four" />
       </div>
 
       <section className="relative z-10 flex min-h-[88svh] items-center justify-center px-6 py-20 text-center">
@@ -42,15 +29,6 @@ export default function Home() {
           <h1 className="font-sans text-6xl font-bold tracking-tight text-white md:text-8xl">
             Omri Weinstein
           </h1>
-
-          <p className="mt-6 border-r-2 border-[#f59a45] pr-2 font-mono text-base font-bold tracking-wide text-white md:text-lg">
-            Creative Coding
-          </p>
-
-          <p className="mt-6 max-w-2xl font-mono text-sm leading-7 text-white/70 md:text-base">
-            I make AI products, backend systems and practical tools with a
-            clean interface and a little bit of play.
-          </p>
 
           <nav className="mt-10 flex w-full max-w-[180px] flex-col gap-4 font-mono text-base text-black">
             <a
