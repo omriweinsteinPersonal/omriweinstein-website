@@ -4,9 +4,9 @@ const projects = [
   {
     name: "Nutrilens",
     description:
-      "NutriLens lets people scan or describe meals and get a personalized nutrition score based on their goals, body profile, and health context. It also ranks restaurant and menu options before they order, turning everyday food decisions into practical coaching.",
+      "NutriLens lets people scan or describe meals and get a personalized nutrition score based on their goals, body profile, and health context. It also ranks restaurant and menu options before they order, and includes a Food Circle layer for sharing meals, smart choices, and progress with friends.",
     url: "https://nutrilens.omriweinstein.com",
-    tags: ["AI", "Nutrition", "Computer Vision"],
+    tags: ["AI", "Nutrition", "Social"],
   },
 ];
 
