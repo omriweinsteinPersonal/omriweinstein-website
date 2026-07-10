@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #242932;
+  --foreground: #ffffff;
 }
 
 @theme inline {
@@ -12,15 +12,171 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.site-constellation {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 20%, rgb(255 255 255 / 8%), transparent 1px),
+    radial-gradient(circle at 80% 38%, rgb(255 255 255 / 7%), transparent 1px),
+    radial-gradient(circle at 42% 72%, rgb(255 255 255 / 6%), transparent 1px);
+  background-size: 36px 36px, 42px 42px, 30px 30px;
+}
+
+.site-constellation::before {
+  position: absolute;
+  inset: -10%;
+  content: "";
+  background:
+    linear-gradient(28deg, transparent 0 18%, rgb(255 255 255 / 7%) 18.15%, transparent 18.35% 47%, rgb(255 255 255 / 6%) 47.15%, transparent 47.35%),
+    linear-gradient(143deg, transparent 0 30%, rgb(255 255 255 / 5%) 30.15%, transparent 30.35% 62%, rgb(255 255 255 / 6%) 62.15%, transparent 62.35%);
+  opacity: 0.85;
+}
+
+.constellation-node {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  opacity: 0.13;
+}
+
+.node-mark {
+  display: grid;
+  min-width: 48px;
+  min-height: 48px;
+  place-items: center;
+  border: 2px solid rgb(255 255 255 / 42%);
+  border-radius: 14px;
+  color: rgb(255 255 255 / 80%);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.node-line {
+  position: absolute;
+  width: 190px;
+  height: 1px;
+  transform: translate(70px, 44px) rotate(24deg);
+  transform-origin: left center;
+  background: rgb(255 255 255 / 35%);
+}
+
+.nutrilens-preview {
+  position: relative;
+  min-height: 330px;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 14%) 1px, transparent 1px),
+    linear-gradient(rgb(255 255 255 / 14%) 1px, transparent 1px),
+    radial-gradient(circle at 32% 38%, #ffc857 0 9%, transparent 9.3%),
+    radial-gradient(circle at 62% 52%, #7bd389 0 12%, transparent 12.4%),
+    radial-gradient(circle at 47% 64%, #ff6b6b 0 11%, transparent 11.4%),
+    linear-gradient(135deg, #1f7a8c, #71c9ce);
+  background-size: 34px 34px, 34px 34px, auto, auto, auto, auto;
+}
+
+.nutrition-panel {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  display: grid;
+  width: min(72%, 360px);
+  gap: 12px;
+  border-radius: 14px;
+  background: rgb(255 255 255 / 88%);
+  padding: 18px;
+  box-shadow: 0 16px 35px rgb(0 0 0 / 18%);
+}
+
+.nutrition-panel div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(0 0 0 / 10%);
+  padding-bottom: 9px;
+  color: #2f2f2f;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 13px;
+}
+
+.nutrition-panel div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.scan-orbit {
+  position: absolute;
+  right: 44px;
+  bottom: 42px;
+  width: 122px;
+  aspect-ratio: 1;
+  border: 14px solid rgb(255 255 255 / 80%);
+  border-right-color: #f59a45;
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgb(0 0 0 / 22%);
+}
+
+.food-chip {
+  position: absolute;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgb(0 0 0 / 18%);
+}
+
+.chip-one {
+  right: 145px;
+  top: 70px;
+  width: 58px;
+  aspect-ratio: 1;
+  background: #f59a45;
+}
+
+.chip-two {
+  right: 28px;
+  top: 124px;
+  width: 46px;
+  aspect-ratio: 1;
+  background: #ffffff;
+}
+
+.chip-three {
+  right: 178px;
+  bottom: 58px;
+  width: 40px;
+  aspect-ratio: 1;
+  background: #242932;
+}
+
+@media (max-width: 640px) {
+  .node-line {
+    width: 120px;
+  }
+
+  .nutrilens-preview {
+    min-height: 250px;
+  }
+
+  .nutrition-panel {
+    left: 20px;
+    top: 24px;
+    width: calc(100% - 40px);
+  }
+
+  .scan-orbit {
+    right: 24px;
+    bottom: 26px;
+    width: 88px;
+    border-width: 10px;
+  }
 }
