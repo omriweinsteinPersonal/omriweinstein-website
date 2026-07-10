@@ -34,12 +34,6 @@ export default function Home() {
 
           <nav className="mt-10 flex w-full max-w-[180px] flex-col gap-4 font-mono text-base text-black">
             <a
-              href="#projects"
-              className="rounded-full bg-[#f59a45] px-6 py-3 shadow-[0_10px_20px_rgba(0,0,0,0.35)] transition hover:-translate-y-0.5 hover:bg-[#ffad5f]"
-            >
-              Projects
-            </a>
-            <a
               href="https://www.linkedin.com/in/omriweinstein/"
               target="_blank"
               rel="noreferrer"
