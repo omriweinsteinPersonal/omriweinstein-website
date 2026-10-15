@@ -12,7 +12,7 @@ const projects = [
     imageClassName: "object-contain p-4",
   },
   {
-    name: "Swayvey",
+    name: "Swavii",
     description:
       "A creator-led discovery marketplace for Israeli shoppers, where trusted creators share product recommendations, short videos, and discount codes. Built across web, iOS, and Android, it gives creators storefronts, publishing tools, and a full studio to manage their audience.",
     tags: ["Marketplace", "Creators", "Mobile"],
@@ -64,10 +64,10 @@ export default function Home() {
               NutriLens
             </a>
             <a
-              href="#swayvey"
+              href="#swavii"
               className="rounded-full bg-gradient-to-r from-[#5eead4] via-[#38bdf8] to-[#a7f3d0] px-6 py-3 shadow-[0_14px_34px_rgba(56,189,248,0.24)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(94,234,212,0.28)]"
             >
-              Swayvey
+              Swavii
             </a>
             <a
               href="https://www.linkedin.com/in/omriweinstein/"
@@ -95,7 +95,7 @@ export default function Home() {
             {projects.map((project) => (
               <article
                 key={project.name}
-                id={project.name === "Swayvey" ? "swayvey" : undefined}
+                id={project.name === "Swavii" ? "swavii" : undefined}
                 className="group w-full max-w-xl overflow-hidden rounded bg-white text-[#2f2f2f] shadow-[0_18px_40px_rgba(0,0,0,0.32)] transition hover:-translate-y-1 hover:shadow-[0_24px_50px_rgba(0,0,0,0.42)]"
               >
                 <div className="px-7 pb-7 pt-6 text-center">
