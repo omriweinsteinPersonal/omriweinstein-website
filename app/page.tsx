@@ -144,9 +144,12 @@ export default function Home() {
                       ↓
                     </a>
                   ) : (
-                    <span className="font-mono text-xs font-semibold uppercase tracking-widest text-neutral-400">
-                      In development
-                    </span>
+                    <a
+                      href="mailto:omri.weinstein@gmail.com?subject=Swavii%20early%20access"
+                      className="font-mono text-xs font-semibold uppercase tracking-widest text-neutral-500 transition hover:text-neutral-900"
+                    >
+                      DM me for early access
+                    </a>
                   )}
                 </div>
               </article>
