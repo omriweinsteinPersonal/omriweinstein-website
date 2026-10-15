@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Omri Weinstein",
-  description: "Creative coding, AI products, and practical tools.",
+  description: "AI products, marketplaces, and practical tools by Omri Weinstein.",
 };
 
 export default function RootLayout({
